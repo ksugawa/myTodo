@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.75;
+}
+
+img {
+  max-width:100%;
+  height:auto;
+  vertical-align: bottom;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+#root {
+  width: 581px;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.completed {
+  opacity: 0.5;
+}
+
+.completed .icon-done{
+  background: #93d94e;
+}
+
+.completed .icon-done::before{
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('./assets/images/check-w.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+form,
+.todo-rest,
+.todoinput-line,
+.todo {
+  width: 100%;
+}
+
+.todoinput-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.todo,
+input[type="text"] {
+  padding: 0.75rem 1rem;
+}
+
+input {
+  border: none;
+}
+
+.todo,
+.todo-addBtn {
+  border: 1px solid #e1e0e0;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0px 4px 25px 0px rgba(225, 224, 224, 0.25);
+}
+
+.todo-input,
+.todo-input-edit {
+  width: calc(100% - 49px);
+  border-radius: 12px 0 0 12px;
+  border: 1px solid #e1e0e0;
+  line-height: 1.75;
+}
+
+.todo-input {
+  background: #e1e0e0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.todoText {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.icon-done {
+  position: relative;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 2px solid #93d94e;
+}
+
+.todo-addBtn {
+  border-radius: 0px 12px 12px 0px;
+  background: #fff;
+  width: 49px;
+  height: 49px;
+}
+
+.todo-rest {
+  text-align: right;
+}
+
+.icons,
+.flex  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-edit,
+.icon-delete {
+  padding: 0 4px;
+}
